@@ -13,7 +13,7 @@ jobs:
       - name: Installer Java (nécessaire pour SonarScanner)
         uses: actions/setup-java@v1
         with:
-          java-version: '11'
+          java-version: '22'
 
       - name: Analyser avec SonarCloud
         run: |
