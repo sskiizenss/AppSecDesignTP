@@ -6,6 +6,13 @@ var libxmljs = require("libxmljs");
 var serialize = require("node-serialize")
 const Op = db.Sequelize.Op
 
+function endsWith(x,y) {
+
+	let index = x.lastIndexOf(y);
+	return x.lastIndexOf(y) === x.length - y.length;
+  
+  }
+
 module.exports.userSearch = function (req, res) {
 	var query = "SELECT name,id FROM Users WHERE login='" + req.body.login + "'";
 	db.sequelize.query(query, {
